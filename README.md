@@ -1,3 +1,5 @@
+https://pm2.keymetrics.io/docs/usage/application-declaration/
+
 Part I: Installing & Deploying PM2 on Windows with PM2-Windows-Service
 This guide assumes you have Node.js installed (and using nvm for Windows if desired) and that your projects have valid "start" scripts defined in their package.json files.
 1. Install PM2 Globally
