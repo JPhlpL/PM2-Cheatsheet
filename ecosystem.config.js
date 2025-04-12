@@ -29,6 +29,16 @@ module.exports = {
         PORT: 3002,
         NODE_ENV: "production"
       },
+    },
+    {
+      name: "perks-fastapi",
+      // Use the virtual environment's python interpreter to launch uvicorn.
+      script: "C:\\wamp64\\www\\DNPH\\perks\\python-api\\venv\\Scripts\\python.exe",
+      args: "-m uvicorn src.main:app --host 0.0.0.0 --port 5000",
+      cwd: "C:\\wamp64\\www\\DNPH\\perks\\python-api",
+      env: {
+        NODE_ENV: "production"
+      },
     }
   ],
 };
