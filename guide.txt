@@ -1,0 +1,164 @@
+C:\wamp64\www>pm2 restart all
+Use --update-env to update environment variables
+[PM2] Applying action restartProcessId on app [all](ids: [ 0, 1, 2 ])
+[PM2] [perks-next](0) ✓
+[PM2] [nextjs-fastapi-supa](1) ✓
+[PM2] [nextjs-portfolio](2) ✓
+┌────┬────────────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name                   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 1  │ nextjs-fastapi-supa    │ default     │ N/A     │ fork    │ 47428    │ 1s     │ 1    │ online    │ 0%       │ 5.0mb    │ ph1… │ disabled │
+│ 2  │ nextjs-portfolio       │ default     │ N/A     │ fork    │ 10948    │ 0s     │ 1    │ online    │ 0%       │ 5.0mb    │ ph1… │ disabled │
+│ 0  │ perks-next             │ default     │ N/A     │ fork    │ 48464    │ 1s     │ 1    │ online    │ 0%       │ 5.0mb    │ ph1… │ disabled │
+└────┴────────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+C:\wamp64\www>pm2 stop all
+[PM2] Applying action stopProcessId on app [all](ids: [ 0, 1, 2 ])
+[PM2] [nextjs-fastapi-supa](1) ✓
+[PM2] [perks-next](0) ✓
+[PM2] [nextjs-portfolio](2) ✓
+┌────┬────────────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name                   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 1  │ nextjs-fastapi-supa    │ default     │ N/A     │ fork    │ 0        │ 0      │ 1    │ stopped   │ 0%       │ 0b       │ ph1… │ disabled │
+│ 2  │ nextjs-portfolio       │ default     │ N/A     │ fork    │ 0        │ 0      │ 1    │ stopped   │ 0%       │ 0b       │ ph1… │ disabled │
+│ 0  │ perks-next             │ default     │ N/A     │ fork    │ 0        │ 0      │ 1    │ stopped   │ 0%       │ 0b       │ ph1… │ disabled │
+└────┴────────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+C:\wamp64\www>pm2 kill
+[PM2] Applying action deleteProcessId on app [all](ids: [ 0, 1, 2 ])
+[PM2] [perks-next](0) ✓
+[PM2] [nextjs-fastapi-supa](1) ✓
+[PM2] [nextjs-portfolio](2) ✓
+[PM2] [v] All Applications Stopped
+[PM2] [v] PM2 Daemon Stopped
+
+C:\wamp64\www>pm2 start ecosystem.config.js
+[PM2] Spawning PM2 daemon with pm2_home=C:\Users\ph10010866\.pm2
+[PM2] PM2 Successfully daemonized
+[PM2][WARN] Applications perks-next, nextjs-fastapi-supa, nextjs-portfolio not running, starting...
+[PM2] App [perks-next] launched (1 instances)
+[PM2] App [nextjs-fastapi-supa] launched (1 instances)
+[PM2] App [nextjs-portfolio] launched (1 instances)
+┌────┬────────────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name                   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 1  │ nextjs-fastapi-supa    │ default     │ N/A     │ fork    │ 48532    │ 0      │ 1    │ stopped   │ 0%       │ 0b       │ ph1… │ disabled │
+│ 2  │ nextjs-portfolio       │ default     │ N/A     │ fork    │ 20852    │ 0      │ 1    │ stopped   │ 0%       │ 0b       │ ph1… │ disabled │
+│ 0  │ perks-next             │ default     │ N/A     │ fork    │ 50116    │ 0      │ 1    │ stopped   │ 0%       │ 0b       │ ph1… │ disabled │
+└────┴────────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+C:\wamp64\www>pm2 stop all
+[PM2] Applying action stopProcessId on app [all](ids: [ 0, 1, 2 ])
+[PM2] [all](0) ✓
+[PM2] [all](1) ✓
+[PM2] [all](2) ✓
+┌────┬────────────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name                   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 1  │ nextjs-fastapi-supa    │ default     │ N/A     │ fork    │ 0        │ 0      │ 15   │ stopped   │ 0%       │ 0b       │ ph1… │ disabled │
+│ 2  │ nextjs-portfolio       │ default     │ N/A     │ fork    │ 0        │ 0      │ 15   │ stopped   │ 0%       │ 0b       │ ph1… │ disabled │
+│ 0  │ perks-next             │ default     │ N/A     │ fork    │ 0        │ 0      │ 15   │ stopped   │ 0%       │ 0b       │ ph1… │ disabled │
+└────┴────────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+C:\wamp64\www>npm install -g pm2-windows-service
+Terminate batch job (Y/N)? Y
+
+C:\wamp64\www>npm install -g pm2-windows-service
+npm WARN deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm WARN deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm WARN deprecated pm2-windows-service@0.2.1: NO LONGER SUPPORTED. Use pm2-installer instead.
+
+added 126 packages in 15s
+
+C:\wamp64\www>pm2-service-install
+(node:14764) Warning: Accessing non-existent property 'cat' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14764) Warning: Accessing non-existent property 'cd' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'chmod' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'cp' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'dirs' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'pushd' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'popd' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'echo' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'tempdir' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'pwd' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'exec' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'ls' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'find' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'grep' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'head' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'ln' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'mkdir' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'rm' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'mv' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'sed' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'set' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'sort' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'tail' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'test' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'to' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'toEnd' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'touch' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'uniq' of module exports inside circular dependency
+(node:14764) Warning: Accessing non-existent property 'which' of module exports inside circular dependency
+? Perform environment setup (recommended)? Yes
+? Set PM2_HOME? Yes
+? PM2_HOME value (this path should be accessible to the service user and
+should not contain any "user-context" variables [e.g. %APPDATA%]): ()
+
+^C
+C:\wamp64\www>pm2-service-install
+(node:45848) Warning: Accessing non-existent property 'cat' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:45848) Warning: Accessing non-existent property 'cd' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'chmod' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'cp' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'dirs' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'pushd' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'popd' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'echo' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'tempdir' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'pwd' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'exec' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'ls' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'find' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'grep' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'head' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'ln' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'mkdir' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'rm' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'mv' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'sed' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'set' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'sort' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'tail' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'test' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'to' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'toEnd' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'touch' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'uniq' of module exports inside circular dependency
+(node:45848) Warning: Accessing non-existent property 'which' of module exports inside circular dependency
+? Perform environment setup (recommended)? Yes
+? Set PM2_HOME? Yes
+? PM2_HOME value (this path should be accessible to the service user and
+should not contain any "user-context" variables [e.g. %APPDATA%]): C:\PM2
+? Set PM2_SERVICE_SCRIPTS (the list of start-up scripts for pm2)? Yes
+? Set the list of startup scripts/files (semi-colon separated json config
+files or js files) C:\wamp64\www\ecosystem.config.js
+? Set PM2_SERVICE_PM2_DIR (the location of the global pm2 to use with the service)? [recommended] Yes
+? Specify the directory containing the pm2 version to be used by the
+service C:\nvm4w\nodejs\node_modules\pm2\index.js
+PM2 service installed and started.
+
+C:\wamp64\www>pm2 list
+┌────┬────────────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name                   │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 1  │ nextjs-fastapi-supa    │ default     │ N/A     │ fork    │ 42396    │ 7s     │ 0    │ online    │ 0%       │ 5.0mb    │ SYSTEM   │ disabled │
+│ 2  │ nextjs-portfolio       │ default     │ N/A     │ fork    │ 41236    │ 7s     │ 0    │ online    │ 0%       │ 4.9mb    │ SYSTEM   │ disabled │
+│ 0  │ perks-next             │ default     │ N/A     │ fork    │ 37344    │ 7s     │ 0    │ online    │ 0%       │ 5.0mb    │ SYSTEM   │ disabled │
+└────┴────────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+C:\wamp64\www>
