@@ -7,13 +7,11 @@ This guide assumes you have Node.js installed (and using nvm for Windows if desi
 bash
 Copy
 npm install -g pm2
-
 	3. Verify the installation:
 
 bash
 Copy
 pm2 --version
-
 2. Create Your Ecosystem Configuration File
 Create a file (for example, ecosystem.config.js) with the following contents. This file tells PM2 how to manage your three Next.js projects:
 
@@ -53,7 +51,6 @@ module.exports = {
     }
   ],
 };
-
 	Notes:
 		○ We use cmd.exe with the argument /c npm start so that the command is run via the command shell.
 		○ The cwd values are full absolute Windows paths where your projects reside.
@@ -67,7 +64,6 @@ bash
 Copy
 cd C:\wamp64\www\DNPH\perks
 npm start
-
 	3. If the app starts without issues, repeat for the remaining projects.
 4. Start Your Applications Using PM2
 	1. Navigate to the directory where your ecosystem.config.js is saved.
@@ -76,19 +72,16 @@ npm start
 bash
 Copy
 pm2 start ecosystem.config.js
-
 	3. Verify that the apps are running:
 
 bash
 Copy
 pm2 list
-
 	4. Check the logs if necessary:
 
 bash
 Copy
 pm2 logs
-
 5. Install PM2 as a Windows Service
 Running PM2 as a Windows service hides the command windows and automatically manages your processes at system boot.
 a. Install the Service Package
@@ -98,14 +91,12 @@ a. Install the Service Package
 bash
 Copy
 npm install -g pm2-windows-service
-
 b. Run the Service Installation Script
 Still in the elevated prompt, run:
 
 bash
 Copy
 pm2-service-install
-
 You will be prompted with several configuration questions. Here’s how to answer:
 	• Perform environment setup (recommended)?
 Answer: Yes
@@ -124,7 +115,6 @@ Answer: Enter the full path to your ecosystem file. For example:
 arduino
 Copy
 C:\wamp64\www\ecosystem.config.js
-
 	• Set PM2_SERVICE_PM2_DIR?
 Answer: Yes
 (This specifies where the global PM2 is located.)
@@ -141,7 +131,6 @@ In your case, the global modules are located at C:\nvm4w\nodejs\node_modules. Th
 makefile
 Copy
 C:\nvm4w\nodejs\node_modules\pm2\index.js
-
 After confirming these answers, the installation script will complete. The PM2 service will be installed and automatically start in the background.
 6. Save Your Process List for Auto-Resurrection
 Once your applications are running and managed by PM2, save the process list to enable auto-resurrection after reboots:
@@ -149,7 +138,6 @@ Once your applications are running and managed by PM2, save the process list to 
 bash
 Copy
 pm2 save
-
 The PM2 service will now automatically load and restart your apps on system boot.
 7. Summary of the Deployment Process
 	1. Install PM2 globally using npm.
