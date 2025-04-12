@@ -172,3 +172,6 @@ pm2 monit	Open the PM2 monitoring interface to view CPU and memory usage.
 pm2 update	Update the PM2 daemon to the latest version without losing process data.
 pm2 kill	Terminate the PM2 daemon and all managed processes.
 	Note: When PM2 is running as a Windows service (using pm2-windows-service), most of these commands still work for managing processes. However, starting the service, auto-resurrect, and log management are handled by the service itself.
+
+ ![image](https://github.com/user-attachments/assets/465e5bbb-30bb-4be0-b2c7-6153816481f1)
+
